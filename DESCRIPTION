@@ -10,9 +10,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Imports: dplyr, graphics, plotly, utils
+Imports: dplyr, ggplot2, plotly, utils, viridis
 NeedsCompilation: no
-Packaged: 2021-10-21 08:02:01 UTC; admin
+Packaged: 2021-10-21 09:13:47 UTC; admin
 Author: Batiste Amistadi [aut],
   Charline Champ [cre],
   Antoine Grancher [aut]

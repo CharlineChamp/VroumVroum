@@ -2,19 +2,17 @@
 % Please edit documentation in R/DataTeamAnalyse.R
 \name{DataTeamAnalyse}
 \alias{DataTeamAnalyse}
-\title{Fonction Analyse des données pour les écuries}
+\title{Représentation des données pour les écuries}
 \usage{
 DataTeamAnalyse(data)
 }
 \arguments{
-\item{data}{data frame spécifique}
+\item{data}{data frame}
 }
 \value{
 donut chart
 }
 \description{
-Renvoie un donut chart qui représente la fréquence des victoires
-des écuries sur une ou plusieurs années.
-La data frame en paramètre doit faire parti des données représentées
+#' La data frame en paramètre doit faire parti des données représentées
 sur la page https://www.formula1.com/en/results.html/2021/races.html
 }

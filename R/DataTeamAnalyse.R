@@ -1,15 +1,9 @@
-#library(plotly)
-#library(dplyr)
-#library(utils)
-
-#' Fonction Analyse des données pour les écuries
+#' Représentation des données pour les écuries
 #'
-#' Renvoie un donut chart qui représente la fréquence des victoires
-#' des écuries sur une ou plusieurs années.
-#' La data frame en paramètre doit faire parti des données représentées
+#'#' La data frame en paramètre doit faire parti des données représentées
 #'sur la page https://www.formula1.com/en/results.html/2021/races.html
 #'
-#' @param data data frame spécifique
+#' @param data data frame
 #'
 #' @return donut chart
 #' @export
@@ -23,14 +17,14 @@ DataTeamAnalyse <- function(data){
   }
   car <- as.factor(cars)
   TeamWinner <- Tri(car)
-  TeamWinner$ymin = c(0, head(TeamWinner$ymax, n=-1))
+  TeamWinner$ymin = c(0, utils::head(TeamWinner$ymax, n=-1))
   TeamWinner$ymax = cumsum(TeamWinner$frequence)
-  TeamWinner <- TeamWinner %>% group_by(modalite)
+  TeamWinner <- TeamWinner %>% dplyr::group_by("modalite")
   fig <- TeamWinner %>% plot_ly(labels = ~modalite, values = ~frequence)
   fig <- fig %>% add_pie(hole = .5)
   fig <- fig %>% layout(showlegend = T,
                         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
                         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
-  fig <- fig %>% layout(legend = list(title=list(text='<b> Écuries </b>')))
+  fig <- fig %>% layout(legend = list(title=list(text='<b> Ecuries </b>')))
   fig
 }
