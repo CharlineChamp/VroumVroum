@@ -1,5 +1,7 @@
-library(plotly)
-library(dplyr)
+#library(plotly)
+#library(dplyr)
+#library(utils)
+
 #' Fonction Analyse des données pour les écuries
 #'
 #' Renvoie un donut chart qui représente la fréquence des victoires
@@ -11,7 +13,8 @@ library(dplyr)
 #'
 #' @return donut chart
 #' @export
-#'
+#' @import plotly dplyr
+
 DataTeamAnalyse <- function(data){
   listTeamWinner <- which(data$Position=="1")
   cars <- c()

@@ -2,3 +2,5 @@
 
 export(DataTeamAnalyse)
 export(Tri)
+import(dplyr)
+import(plotly)

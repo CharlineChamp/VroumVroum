@@ -2,14 +2,18 @@ Package: VroumVroum
 Title: PROJET F1: Fonctions
 Version: 0.0.0.9000
 Authors@R: 
-    person("Charline", "Champ", , "charline.champ@etu.univ-grenoble.com", role = c("aut", "cre"))
+    c(person("Batiste", "Amistadi", , "batiste.amistadi@etu.univ-grenoble.com", role = c("aut")),
+    person("Charline", "Champ", , "charline.champ@etu.univ-grenoble.com", role = c("cre")),
+    person("Antoine", "Grancher", , "antoine.grancher@etu.univ-grenoble.com", role = c("aut")))
 Description: Fonctions utiles pour la création de nos graphiques présents dans notre Application Shiny.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
-Imports: dplyr, plotly
+Imports: dplyr, graphics, plotly, utils
 NeedsCompilation: no
-Packaged: 2021-10-21 06:54:39 UTC; admin
-Author: Charline Champ [aut, cre]
+Packaged: 2021-10-21 08:02:01 UTC; admin
+Author: Batiste Amistadi [aut],
+  Charline Champ [cre],
+  Antoine Grancher [aut]
 Maintainer: Charline Champ <charline.champ@etu.univ-grenoble.com>
