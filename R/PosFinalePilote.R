@@ -42,7 +42,7 @@ PosFinalePilote <- function(data_driver_race,data_fl,data_races,data_driver){
     scale_fill_viridis(discrete=F,begin=0,end=1,option = "plasma") +
     theme(plot.title = element_text(face = "bold",hjust = 0.5)) +
     ggtitle("Position finale des pilotes ayant \n fait le tour le plus rapide")
+  diagramme
 
-  #Conversion en plotly
-  ggplotly(diagramme)
+ ggplotly(diagramme)
 }

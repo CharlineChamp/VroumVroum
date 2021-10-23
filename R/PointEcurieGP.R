@@ -47,8 +47,8 @@ PointEcurieGP <- function(data_race_driver){
     theme(legend.title = element_text(size=10))+
     theme(axis.text.x = element_text(face="bold", color="black", size=10, angle=30))+
     labs(title="Representation de la somme des points gagnes par ecurie par grand prix")
-
-  #Concersion en plotly
-  ggplotly(position_ecurie_graph)
+  position_ecurie_graph
+  #Conversion en plotly
+  #plotly::ggplotly(position_ecurie_graph)
 
 }
