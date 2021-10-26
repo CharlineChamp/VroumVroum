@@ -13,11 +13,12 @@ DNFDriver <- function(data_driver_races){
   DNS <- data_driver_races$Driver[data_driver_races$Position=='DNS']
 
   #data frame des DNF/DNS
-  total<-data.frame("modalite"=as.factor(c(DNF,DNS)))
+  total<-data.frame(modalite=as.factor(c(DNF,DNS)))
 
   #Diagramme en barre des proportions de DNF/DNS par pilote
-  DNF_S_pilote <- ggplot(data=total,aes("modalite"))+
-    geom_bar(aes(fill="modalite"))+
+  modalite <- total$modalite
+  DNF_S_pilote <- ggplot(data=total,aes(modalite))+
+    geom_bar(aes(fill=modalite))+
     ggtitle("Nombre de DNF et DNS de chaque pilote")+
     labs(fill="Pilotes")+
     xlab("Pilotes")+

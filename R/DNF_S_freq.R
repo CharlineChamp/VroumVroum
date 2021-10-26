@@ -28,7 +28,9 @@ DNF_S_freq <- function(dataDrivers){
   total2$frequence <- total2$frequence/nbr_grandprix
 
   #On crée un diagramme en barres des fréquences de DNF/DNS de chaque pilote.
-  DNF_S_pilote <- ggplot(data=total2,aes(x="modalite",y="frequence",fill="modalite"))+
+  modalite <- total2$modalite
+  frequence <- total2$frequence
+  DNF_S_pilote <- ggplot(data=total2,aes(x=modalite,y=frequence,fill=modalite))+
     geom_bar(stat="identity")+
     ggtitle("Nombre de DNF et DNS de chaque pilote")+
     labs(fill="Pilotes")+

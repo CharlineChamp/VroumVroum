@@ -4,12 +4,10 @@
 \alias{DNFGrandPrix}
 \title{Nombre de DNF et DNS de chaque grand prix}
 \usage{
-DNFGrandPrix(data_race_driver, data_race)
+DNFGrandPrix(data_race_driver)
 }
 \arguments{
 \item{data_race_driver}{data frame}
-
-\item{data_race}{data frame}
 }
 \value{
 graphique
