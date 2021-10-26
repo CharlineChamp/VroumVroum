@@ -27,7 +27,7 @@ Pts_moyens_Driver_GP <-function(datadrivers,dataraces){
   #On divise le nombre de pts par le nombre de grand prix pour obtenir les points moyens.
   data_driver_pts$Points<-data_driver_pts$Points/freq
 
-  driver_pts_gp <- ggplot(data=data_driver_pts,aes(x="Driver",y="Points",fill=Driver))+
+  driver_pts_gp <- ggplot(data=data_driver_pts,aes(x=Driver,y=Points,fill=Driver))+
     geom_bar(stat="identity")+
     ggtitle("Nombre de points moyens par grand prix de chaque pilote")+
     labs(fill="Pilotes")+
