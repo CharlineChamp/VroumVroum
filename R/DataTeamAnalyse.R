@@ -7,7 +7,7 @@
 #'
 #' @return donut chart
 #' @export
-#' @import plotly
+#' @import plotly dplyr
 
 DataTeamAnalyse <- function(data){
   listTeamWinner <- which(data$Position=="1")

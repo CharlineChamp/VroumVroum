@@ -10,7 +10,15 @@
 #'
 #' @return diagramme en barre
 #' @export
-#' @import ggplot2
+#' @import plotly
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 geom_bar
+#' @importFrom ggplot2 ggtitle
+#' @importFrom ggplot2 scale_x_continuous
+#' @importFrom ggplot2 scale_y_continuous
+#' @importFrom ggplot2 theme
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 element_text
 
 PosFinalePilote <- function(data_driver_race,data_fl,data_races,data_driver){
 
