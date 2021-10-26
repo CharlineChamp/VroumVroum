@@ -19,6 +19,6 @@ PosFinalePilote(data_driver_race, data_fl, data_races, data_driver)
 diagramme en barre
 }
 \description{
-#' Les datas frames en paramètre doit faire parti des données représentées
+Les datas frames en paramètre doit faire parti des données représentées
 sur la page https://www.formula1.com/en/results.html/2021/races.html
 }
