@@ -33,9 +33,10 @@ PosFinalePilote <- function(data_driver_race,data_fl,data_races,data_driver){
 
   #data frame comprenant les fréquences des positions d'arrivées
   g <- Tri(liste_position)
-  position_pilote <- g$modalite
+
   #Diagramme en barre des fréquences
   frequence <- g$frequence
+  position_pilote <- g$modalite
   diagramme <- ggplot(g, aes(x=position_pilote, y=frequence,fill = position_pilote)) +
     geom_bar(stat = "identity",show.legend= F) +
     scale_x_continuous(name="Position finale des pilotes", breaks = c(1:total_pilote)) +

@@ -35,7 +35,9 @@ PointEcurieGP <- function(data_race_driver){
   position_ecurie <- data.frame(Ecurie=ecurie,GrandPrix=GP,Points=somme)
 
   #Graphe de la sommes des points des écuries par Grand Prix
-  position_ecurie_graph <- ggplot(data = position_ecurie,aes(x="GrandPrix",y="Points",group=Ecurie,colour=Ecurie))+
+  gp <- position_ecurie$GrandPrix
+  p <- position_ecurie$Points
+  position_ecurie_graph <- ggplot(data = position_ecurie,aes(x=gp,y=p,group=Ecurie,colour=Ecurie))+
     geom_line()+
     theme_bw()+
     guides(fill=guide_legend("Ecuries"))+
@@ -48,7 +50,8 @@ PointEcurieGP <- function(data_race_driver){
     theme(axis.text.x = element_text(face="bold", color="black", size=10, angle=30))+
     labs(title="Representation de la somme des points gagnes par ecurie par grand prix")
   position_ecurie_graph
+
   #Conversion en plotly
-  #plotly::ggplotly(position_ecurie_graph)
+  ggplotly(position_ecurie_graph)
 
 }
