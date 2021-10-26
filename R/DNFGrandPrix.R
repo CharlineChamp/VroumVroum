@@ -18,7 +18,8 @@ DNFGrandPrix <- function(data_race_driver,data_race){
   total <- data.frame(modalite=as.factor(c(DNF,DNS)))
 
   #Diagramme en barre des DNF/DNS par grand prix
-  DNF_S <- ggplot(data=total,aes("modalite"))+
+  m <- total$modalite
+  DNF_S <- ggplot(data=total,aes(m))+
     geom_bar(aes(fill="modalite"))+
     scale_x_discrete(limits=unique(data_race$GrandPrix))+
     ggtitle("Nombre de DNF et DNS de chaque grand prix")+
