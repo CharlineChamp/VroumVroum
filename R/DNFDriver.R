@@ -4,7 +4,7 @@
 #'
 #' @return graphique
 #' @export
-#' @import plotly
+#' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
 #' @importFrom ggplot2 ggtitle
@@ -39,5 +39,5 @@ DNFDriver <- function(data_driver_races){
     theme(legend.title = element_text(size=15))
 
   #Conversion en plotly
-  plotly::ggplotly(DNF_S_pilote)
+  ggplotly(DNF_S_pilote)
 }

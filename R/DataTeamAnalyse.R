@@ -7,7 +7,11 @@
 #'
 #' @return donut chart
 #' @export
-#' @import plotly dplyr
+#' @importFrom utils head
+#' @import dplyr
+#' @importFrom plotly layout
+#' @importFrom plotly add_pie
+#' @importFrom plotly plot_ly
 
 DataTeamAnalyse <- function(data){
   listTeamWinner <- which(data$Position=="1")
@@ -17,9 +21,9 @@ DataTeamAnalyse <- function(data){
   }
   car <- as.factor(cars)
   TeamWinner <- Tri(car)
-  TeamWinner$ymin = c(0, utils::head(TeamWinner$ymax, n=-1))
+  TeamWinner$ymin = c(0, head(TeamWinner$ymax, n=-1))
   TeamWinner$ymax = cumsum(TeamWinner$frequence)
-  TeamWinner <- TeamWinner %>% dplyr::group_by("modalite")
+  TeamWinner <- TeamWinner %>% group_by("modalite")
   fig <- TeamWinner %>% plot_ly(labels = ~modalite, values = ~frequence)
   fig <- fig %>% add_pie(hole = .5)
   fig <- fig %>% layout(showlegend = T,

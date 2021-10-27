@@ -10,7 +10,7 @@
 #'
 #' @return diagramme en barre
 #' @export
-#' @import plotly
+#' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
 #' @importFrom ggplot2 ggtitle
@@ -53,5 +53,5 @@ PosFinalePilote <- function(data_driver_race,data_fl,data_races,data_driver){
     theme(plot.title = element_text(face = "bold",hjust = 0.5)) +
     ggtitle("Position finale des pilotes ayant \n fait le tour le plus rapide")
 
- plotly::ggplotly(diagramme)
+ ggplotly(diagramme)
 }

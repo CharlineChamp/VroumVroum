@@ -7,7 +7,7 @@
 #'
 #' @return graphique
 #' @export
-#' @import plotly
+#' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_line
 #' @importFrom ggplot2 theme_bw
@@ -62,6 +62,6 @@ PointEcurieGP <- function(data_race_driver){
     labs(title="Representation de la somme des points gagnes par ecurie par grand prix")
 
   #Conversion en plotly
-  plotly::ggplotly(position_ecurie_graph)
+  ggplotly(position_ecurie_graph)
 
 }

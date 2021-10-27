@@ -5,7 +5,7 @@
 #'
 #' @return graphique
 #' @export
-#' @import plotly
+#' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_line
 #' @importFrom ggplot2 ggtitle
@@ -43,6 +43,6 @@ PointDriverGP <- function(data_driver_race, data_race){
     theme(legend.title = element_text(size=10))+
     theme(axis.text.x = element_text(face="bold", color="black", size=10, angle=30))
   #Conversion en plotly
-  plotly::ggplotly(DriversparRaces)
+  ggplotly(DriversparRaces)
 
 }

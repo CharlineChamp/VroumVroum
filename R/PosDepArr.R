@@ -6,7 +6,7 @@
 #'
 #' @return graphique
 #' @export
-#' @import plotly
+#' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_point
 #' @importFrom ggplot2 ggtitle
@@ -66,6 +66,6 @@ PosDepArr <- function(data_sg, data_driver_race, grand_prix){
     ggtitle("Comparaison des positions de depart et \n d'arrivee des pilotes")
   graphique
   #Conversion en plotly
- plotly::ggplotly(graphique)
+ ggplotly(graphique)
 
 }

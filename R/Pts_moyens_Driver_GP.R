@@ -5,6 +5,7 @@
 #'
 #' @return graphique
 #' @export
+#' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
 #' @importFrom ggplot2 ggtitle
@@ -53,5 +54,5 @@ Pts_moyens_Driver_GP <-function(datadrivers,dataraces){
     theme_classic()+
     theme(legend.title = element_text(size=15))
 
-  plotly::ggplotly(driver_pts_gp)
+  ggplotly(driver_pts_gp)
 }

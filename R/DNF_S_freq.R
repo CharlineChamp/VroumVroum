@@ -4,7 +4,7 @@
 #'
 #' @return graphique
 #' @export
-#' @import plotly
+#' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
 #' @importFrom ggplot2 ggtitle
@@ -56,5 +56,5 @@ DNF_S_freq <- function(dataDrivers){
     theme(legend.title = element_text(size=15))
 
   #Affichage du ggplot avec ggplotly pour une interactivité avec le diagramme.
-  plotly::ggplotly(DNF_S_pilote)
+  ggplotly(DNF_S_pilote)
 }

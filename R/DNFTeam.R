@@ -4,8 +4,11 @@
 #'
 #' @return graphique
 #' @export
-#' @import plotly
-
+#' @importFrom utils head
+#' @import dplyr
+#' @importFrom plotly layout
+#' @importFrom plotly add_pie
+#' @importFrom plotly plot_ly
 
 DNFTeam <-  function(data){
 
@@ -25,7 +28,7 @@ DNFTeam <-  function(data){
   DNFTeam <- Tri(DNF)
 
   #Compute the bottom of each rectangle
-  DNFTeam$ymin = c(0, utils::head(DNFTeam$ymax, n=-1))
+  DNFTeam$ymin = c(0, head(DNFTeam$ymax, n=-1))
 
   #Compute the cumulative percentages (top of each rectangle)
   DNFTeam$ymax = cumsum(DNFTeam$frequence)
