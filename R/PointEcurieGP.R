@@ -15,7 +15,6 @@
 #' @importFrom ggplot2 ylab
 #' @importFrom ggplot2 guides
 #' @importFrom ggplot2 theme
-#' @importFrom ggplot2 labs
 #' @importFrom ggplot2 aes
 #' @importFrom ggplot2 element_text
 #' @importFrom ggplot2 guide_legend
@@ -58,8 +57,7 @@ PointEcurieGP <- function(data_race_driver){
     theme(axis.title.x = element_text(hjust=0.5,size=15))+
     theme(axis.title.y=element_text(hjust=0.5,size=15))+
     theme(legend.title = element_text(size=10))+
-    theme(axis.text.x = element_text(face="bold", color="black", size=10, angle=30))+
-    labs(title="Representation de la somme des points gagnes par ecurie par grand prix")
+    theme(axis.text.x = element_text(face="bold", color="black", size=10, angle=30))
 
   #Conversion en plotly
   ggplotly(position_ecurie_graph)

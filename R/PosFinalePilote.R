@@ -13,7 +13,6 @@
 #' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
-#' @importFrom ggplot2 ggtitle
 #' @importFrom ggplot2 scale_x_continuous
 #' @importFrom ggplot2 scale_y_continuous
 #' @importFrom ggplot2 theme
@@ -50,8 +49,7 @@ PosFinalePilote <- function(data_driver_race,data_fl,data_races,data_driver){
     scale_x_continuous(name="Position finale des pilotes", breaks = c(1:total_pilote)) +
     scale_y_continuous(name="Frequence") +
     viridis::scale_fill_viridis(discrete=F,begin=0,end=1,option = "plasma") +
-    theme(plot.title = element_text(face = "bold",hjust = 0.5)) +
-    ggtitle("Position finale des pilotes ayant \n fait le tour le plus rapide")
+    theme(plot.title = element_text(face = "bold",hjust = 0.5))
 
  ggplotly(diagramme)
 }

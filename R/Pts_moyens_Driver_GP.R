@@ -8,7 +8,6 @@
 #' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
-#' @importFrom ggplot2 ggtitle
 #' @importFrom ggplot2 xlab
 #' @importFrom ggplot2 ylab
 #' @importFrom ggplot2 theme
@@ -42,7 +41,6 @@ Pts_moyens_Driver_GP <-function(datadrivers,dataraces){
   Points <- data_driver_pts$Points
   driver_pts_gp <- ggplot(data=data_driver_pts,aes(x=Driver,y=Points,fill=Driver))+
     geom_bar(stat="identity")+
-    ggtitle("Nombre de points moyens par grand prix de chaque pilote")+
     labs(fill="Pilotes")+
     xlab("Pilotes")+
     ylab("Nombre de points moyens")+

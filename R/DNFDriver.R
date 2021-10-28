@@ -7,7 +7,6 @@
 #' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
-#' @importFrom ggplot2 ggtitle
 #' @importFrom ggplot2 xlab
 #' @importFrom ggplot2 ylab
 #' @importFrom ggplot2 theme
@@ -28,7 +27,6 @@ DNFDriver <- function(data_driver_races){
   modalite <- total$modalite
   DNF_S_pilote <- ggplot(data=total,aes(modalite))+
     geom_bar(aes(fill=modalite))+
-    ggtitle("Nombre de DNF et DNS de chaque pilote")+
     labs(fill="Pilotes")+
     xlab("Pilotes")+
     ylab("Nombre de DNF et DNS")+

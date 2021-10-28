@@ -7,7 +7,6 @@
 #' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
-#' @importFrom ggplot2 ggtitle
 #' @importFrom ggplot2 xlab
 #' @importFrom ggplot2 ylab
 #' @importFrom ggplot2 theme
@@ -43,7 +42,6 @@ DNF_S_freq <- function(dataDrivers){
   frequence <- total2$frequence
   DNF_S_pilote <- ggplot(data=total2,aes(x=modalite,y=frequence,fill=modalite))+
     geom_bar(stat="identity")+
-    ggtitle("Nombre de DNF et DNS de chaque pilote")+
     labs(fill="Pilotes")+
     xlab("Pilotes")+
     ylab("Nombre de DNF et DNS")+

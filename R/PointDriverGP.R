@@ -8,7 +8,6 @@
 #' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_line
-#' @importFrom ggplot2 ggtitle
 #' @importFrom ggplot2 xlab
 #' @importFrom ggplot2 ylab
 #' @importFrom ggplot2 theme
@@ -33,8 +32,6 @@ PointDriverGP <- function(data_driver_race, data_race){
     geom_line()+
     theme_bw()+
     scale_x_discrete(limits=unique(GrandPrix))+
-    ggtitle("Representation des points gagnes par pilote par grand prix")+
-    # labs(colour="Pilotes")+
     xlab("Grands Prix")+
     ylab("Nombre de points gagnes")+
     theme(plot.title=element_text(hjust=0.5,size=18,face="bold"))+
@@ -42,6 +39,7 @@ PointDriverGP <- function(data_driver_race, data_race){
     theme(axis.title.y=element_text(hjust=0.5,size=15))+
     theme(legend.title = element_text(size=10))+
     theme(axis.text.x = element_text(face="bold", color="black", size=10, angle=30))
+
   #Conversion en plotly
   ggplotly(DriversparRaces)
 

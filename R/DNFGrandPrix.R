@@ -7,7 +7,6 @@
 #' @importFrom plotly ggplotly
 #' @importFrom ggplot2 ggplot
 #' @importFrom ggplot2 geom_bar
-#' @importFrom ggplot2 ggtitle
 #' @importFrom ggplot2 xlab
 #' @importFrom ggplot2 ylab
 #' @importFrom ggplot2 theme
@@ -32,7 +31,6 @@ DNFGrandPrix <- function(data_race_driver){
   frequence <- total$frequence
   DNF_S <- ggplot(data=total,aes(x = modalite,y = frequence,fill=modalite))+
     geom_bar(stat="identity")+
-    ggtitle("Nombre de DNF et DNS de chaque grand prix")+
     labs(fill="Grands prix")+
     xlab("Grands Prix")+
     ylab("Nombre de DNF et DNS")+
