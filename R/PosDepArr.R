@@ -1,0 +1,53 @@
+#' Comparaison des positions de depart et d'arrivee des pilotes
+#'
+#' @param data_sg data frame
+#' @param data_driver_race data frame
+#' @param grand_prix data frame
+#'
+#' @return graphique
+#' @export
+#' @importFrom plotly ggplotly
+#' @importFrom ggplot2 ggplot
+#' @importFrom ggplot2 geom_point
+#' @importFrom ggplot2 ggtitle
+#' @importFrom ggplot2 scale_x_continuous
+#' @importFrom ggplot2 scale_y_continuous
+#' @importFrom ggplot2 geom_segment
+#' @importFrom ggplot2 theme
+#' @importFrom ggplot2 labs
+#' @importFrom ggplot2 aes
+#' @importFrom ggplot2 element_text
+
+PosDepArr <- function(data_sg, data_driver_race, grand_prix){
+
+  #Récupération du grand prix
+  l <- data_sg[data_sg$GrandPrix == grand_prix,]
+
+  #Récupération des positions de départ du grand prix
+  position_depart <- as.numeric(l$Position)
+  pilote_depart <- l$Driver
+  depart <- data.frame(position_depart,pilote_depart)
+
+  #Récupération du grand prix
+  lbis <- data_driver_race[data_driver_race$GrandPrix == grand_prix,]
+
+  #Récupération des positions d'arrivée du grand prix
+  position_arrivee <- as.numeric(lbis$Position)
+  pilote_arrivee <- lbis$Driver
+  arrivee <- data.frame(position_arrivee,pilote_arrivee)
+
+  #Data frame finales comportant les positions de départ et d'arrivée associées Ã  chaque pilote
+  g <- data.frame(depart[order(pilote_depart),],position_arrivee=arrivee[order(pilote_arrivee),]$position_arrivee)
+
+  #Graphe des position de départ et d'arrivée
+  graphique <- ggplot(g, aes(x=position_depart, y=position_arrivee, color=pilote_depart)) +
+    geom_point() +
+    geom_segment(aes(x = 0, y = 0, xend = 20, yend = 20),color="black") +
+    labs(color = "Pilotes") +
+    theme(plot.title = element_text(face = "bold",hjust = 0.5)) +
+    ggtitle("Comparaison des positions de depart et \n d'arrivee des pilotes")
+
+  #Conversion en plotly
+  ggplotly(graphique)
+
+}
