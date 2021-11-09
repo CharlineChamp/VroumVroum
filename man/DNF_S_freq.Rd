@@ -2,16 +2,20 @@
 % Please edit documentation in R/DNF_S_freq.R
 \name{DNF_S_freq}
 \alias{DNF_S_freq}
-\title{Nombre de DNF et DNS de chaque pilote}
+\title{Fréquence de DNF/DNS de chaque pilote entre 2 années sélectionnées en amont}
 \usage{
-DNF_S_freq(dataDrivers)
+DNF_S_freq(dataDrivers, annee_inf, annee_sup)
 }
 \arguments{
 \item{dataDrivers}{data frame}
+
+\item{annee_inf}{data frame}
+
+\item{annee_sup}{int}
 }
 \value{
 graphique
 }
 \description{
-Nombre de DNF et DNS de chaque pilote
+Fréquence de DNF/DNS de chaque pilote entre 2 années sélectionnées en amont
 }

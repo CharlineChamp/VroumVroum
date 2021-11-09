@@ -1,6 +1,8 @@
-#' Nombre de DNF et DNS de chaque pilote
+#' Fréquence de DNF/DNS de chaque pilote entre 2 années sélectionnées en amont
 #'
 #' @param dataDrivers data frame
+#' @param annee_inf data frame
+#' @param annee_sup int
 #'
 #' @return graphique
 #' @export
@@ -16,11 +18,13 @@
 #' @importFrom ggplot2 aes
 #' @importFrom ggplot2 element_text
 
-DNF_S_freq <- function(dataDrivers){
+DNF_S_freq <- function(dataDrivers,annee_inf,annee_sup){
   #Fréquence de DNF/DNS de chaque pilote entre 2 années sélectionnées en amont.
   #Un pilote apparer seulement s'il a au moins une fois DNF/DNS.
 
-  #On récupère les noms des personnes qui ont DNF et DNS.
+  #On récupÃ¨re les noms des personnes qui ont DNF et DNS.
+  dataDrivers<- filter(dataDrivers, dataDrivers$Year >= annee_inf)
+  dataDrivers<- filter(dataDrivers, dataDrivers$Year <= annee_sup)
   DNF <- dataDrivers$Driver[dataDrivers$Position=='DNF']
   DNS <- dataDrivers$Driver[dataDrivers$Position=='DNS']
 
@@ -42,6 +46,7 @@ DNF_S_freq <- function(dataDrivers){
   frequence <- total2$frequence
   DNF_S_pilote <- ggplot(data=total2,aes(x=modalite,y=frequence,fill=modalite))+
     geom_bar(stat="identity")+
+    ggtitle("Nombre de DNF et DNS de chaque pilote")+
     labs(fill="Pilotes")+
     xlab("Pilotes")+
     ylab("Nombre de DNF et DNS")+
