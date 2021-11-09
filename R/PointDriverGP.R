@@ -21,17 +21,19 @@ PointDriverGP <- function(data_driver_race, data_race){
 
   #Récupération des points, des Grands Prix et des pilotes
   Points <- as.numeric(data_driver_race$Points)
-  GrandPrix <- as.factor(unique(data_race$GrandPrix))
+  GrandPrix2 <- as.factor(unique(data_driver_race$GrandPrix))
   Driver <- as.factor(data_driver_race$Driver)
 
   #Création de la data frame comprenant ces données
-  data <- data.frame(GrandPrix,Points,Driver)
+  data <- data.frame(GrandPrix2,Points,Driver)
 
   #Plot des courbes des pilotes (nombre de ppints en fonction de chaque gp)
+  GrandPrix <- data$GrandPrix
+  Points <- data$Points
   DriversparRaces <- ggplot(data=data,aes(x=GrandPrix,y=Points,group=Driver,colour=Driver))+
     geom_line()+
     theme_bw()+
-    scale_x_discrete(limits=unique(GrandPrix))+
+    scale_x_discrete(limits=unique(data_race$GrandPrix))+
     xlab("Grands Prix")+
     ylab("Nombre de points gagnes")+
     theme(plot.title=element_text(hjust=0.5,size=18,face="bold"))+
