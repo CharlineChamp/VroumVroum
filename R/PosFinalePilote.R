@@ -49,7 +49,7 @@ PosFinalePilote <- function(data_driver_race,data_fl,data_races,data_driver){
   position_pilote <- g$modalite
   diagramme <- ggplot(g, aes(x=position_pilote, y=frequence,fill = position_pilote)) +
     geom_bar(stat = "identity",show.legend= F) +
-    scale_x_continuous(name="Position finale des pilotes", breaks = c(1:total_pilote)) +
+    scale_x_continuous(name="Position finale des pilotes", breaks = c(0:total_pilote)) +
     scale_y_continuous(name="Frequence") +
     viridis::scale_fill_viridis(discrete=F,begin=0,end=1,option = "plasma") +
     theme(plot.title = element_text(face = "bold",hjust = 0.5))
