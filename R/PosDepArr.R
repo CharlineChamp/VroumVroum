@@ -44,8 +44,7 @@ PosDepArr <- function(data_sg, data_driver_race, grand_prix){
     geom_point() +
     geom_segment(aes(x = 0, y = 0, xend = 20, yend = 20),color="black") +
     labs(color = "Pilotes") +
-    theme(plot.title = element_text(face = "bold",hjust = 0.5)) +
-    ggtitle("Comparaison des positions de depart et \n d'arrivee des pilotes")
+    theme(plot.title = element_text(face = "bold",hjust = 0.5))
 
   #Conversion en plotly
   ggplotly(graphique)

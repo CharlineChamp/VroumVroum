@@ -28,7 +28,7 @@ PointDriverGP <- function(data_driver_race, data_race){
   data <- data.frame(GrandPrix,Points,Driver)
 
   #Plot des courbes des pilotes (nombre de ppints en fonction de chaque gp)
-  DriversparRaces <- ggplot(data=data,aes(x=data$GrandPrix,y=data$Points,group=Driver,colour=Driver))+
+  DriversparRaces <- ggplot(data=data,aes(x=GrandPrix,y=Points,group=Driver,colour=Driver))+
     geom_line()+
     theme_bw()+
     scale_x_discrete(limits=unique(data_race$GrandPrix))+

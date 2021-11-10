@@ -1,4 +1,4 @@
-#' Nombre de points moyens par grand prix de chaque pilote
+#' Nombre de points moyens de chaque pilote sur une saison
 #'
 #' @param datadrivers data frame
 #' @param dataraces data frame
@@ -28,7 +28,7 @@ Pts_moyens_Driver_GP <-function(datadrivers,dataraces){
     GP_annee[i]<-length(dataraces$Year[dataraces$Year==year[i]])
   }
   #On crée notre data frame où on associe au Driver l'année.
-  data_driver_pts <-data.frame(Driver=paste0(datadrivers$Driver," ",datadrivers$Year),Points=datadrivers$Points)
+  data_driver_pts <-data.frame(Driver=datadrivers$Driver,Points=datadrivers$Points)
   freq<-c()
   for(i in 1:length(year)){
     #On crée un vecteur freq de la même taille que le nombre de lignes de la data.frame.

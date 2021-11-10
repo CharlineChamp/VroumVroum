@@ -2,7 +2,7 @@
 % Please edit documentation in R/Pts_moyens_Driver_GP.R
 \name{Pts_moyens_Driver_GP}
 \alias{Pts_moyens_Driver_GP}
-\title{Nombre de points moyens par grand prix de chaque pilote}
+\title{Nombre de points moyens de chaque pilote sur une saison}
 \usage{
 Pts_moyens_Driver_GP(datadrivers, dataraces)
 }
@@ -15,5 +15,5 @@ Pts_moyens_Driver_GP(datadrivers, dataraces)
 graphique
 }
 \description{
-Nombre de points moyens par grand prix de chaque pilote
+Nombre de points moyens de chaque pilote sur une saison
 }
