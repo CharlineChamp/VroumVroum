@@ -85,4 +85,15 @@
 #' }
 "dataRaces"
 
-
+#' Data Coord
+#'
+#' Données sur chaque Grand Prix de 1950 à 2020
+#'
+#' @format Une data frame avec quatres variables :
+#' \describe{
+#' \item{\code{Year}}{Année}
+#' #' \item{\code{Circuit}}{Nom des circuits où sont les Grands Prix}
+#' \item{\code{Lat}}{Latitude}
+#' \item{\code{Lng}}{Longtitude}
+#' }
+"dataCoord"
