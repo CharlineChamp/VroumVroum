@@ -17,6 +17,7 @@ Imports:
     leaflet,
     plotly,
     sp,
+    terra,
     utils,
     viridis
 Depends: 
