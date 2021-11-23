@@ -13,7 +13,7 @@ MapGP <- function(data){
     cbind((data$Lng), (data$Lat)),
     data.frame(type = factor(1:length(data$Lng))))
 
-  Icon <- makeIcon(iconUrl = "circuit.png",iconWidth= 15,iconHeight= 15)
+  Icon <- makeIcon(iconUrl = "circuit.png",iconWidth= 35,iconHeight= 10)
   #Création de la carte interactive
   leaflet(df) %>% addTiles()%>% addMarkers(icon = Icon,lng=data$Lng,lat=data$Lat,popup=data$Circuit) %>%addProviderTiles("CartoDB.DarkMatter")
 
