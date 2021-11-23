@@ -1,5 +1,7 @@
 #' Nombre de DNF et DNS de chaque grand prix
 #'
+#' Affichage d’un diagramme en barre, réalisé sous plotly et ggplot2, représentant le nombre d'abandons par grand prix sur une saison. Les données doivent être issues de la data frame dataDriversParRaces.
+#'
 #' @param data_race_driver data frame
 #'
 #' @return graphique

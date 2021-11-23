@@ -1,4 +1,6 @@
-#' Représentation des points gagnes par pilote par grand prix
+#' Représentation des points gagnés par pilote par grand prix
+#'
+#'Affichage d’un graphique réalisé avec plotly et ggplot2 représentant le nombre de points gagnés de chaque pilote par grand prix sur une saison. Les données doivent être issues des data frames dataDriversParRaces et dataRaces.
 #'
 #' @param data_driver_race data frame
 #' @param data_race dataframe

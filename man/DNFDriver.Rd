@@ -13,5 +13,5 @@ DNFDriver(data_driver_races)
 graphique
 }
 \description{
-Nombre de DNF et DNS de chaque pilote
+Affichage d’un diagramme en barre réalisé sous plotly et ggplot2, représentant le nombre d'abandons par pilotes sur une saison. Les données doivent être issues de la data frame dataDriversParRaces.
 }

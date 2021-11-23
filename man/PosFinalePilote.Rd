@@ -19,6 +19,5 @@ PosFinalePilote(data_driver_race, data_fl, data_races, data_driver)
 diagramme en barre
 }
 \description{
-Les datas frames en paramètre doit faire parti des données représentées
-sur la page https://www.formula1.com/en/results.html/2021/races.html
+Affichage d’un diagramme en barre, réalisé sous plotly et ggplot2, représentant la fréquence de la position d'arrivée du pilote ayant fait le tour le plus rapide. Les données doivent être issues des data frames: dataDriversParRaces, dataFL, dataRaces, dataDrivers.
 }

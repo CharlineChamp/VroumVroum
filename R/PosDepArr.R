@@ -1,5 +1,7 @@
 #' Comparaison des positions de depart et d'arrivee des pilotes
 #'
+#' Affichage d’un nuage de points, réalisé sous plotly et ggplot2, représentant la position d'arrivée d'un pilote en fonction de sa position de départ sur un grand prix. Les données doivent être issues des data frames dataStartingGrid et dataDriversParRaces.
+#'
 #' @param data_sg data frame
 #' @param data_driver_race data frame
 #' @param grand_prix data frame

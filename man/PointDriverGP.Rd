@@ -2,7 +2,7 @@
 % Please edit documentation in R/PointDriverGP.R
 \name{PointDriverGP}
 \alias{PointDriverGP}
-\title{Représentation des points gagnes par pilote par grand prix}
+\title{Représentation des points gagnés par pilote par grand prix}
 \usage{
 PointDriverGP(data_driver_race, data_race)
 }
@@ -15,5 +15,5 @@ PointDriverGP(data_driver_race, data_race)
 graphique
 }
 \description{
-Représentation des points gagnes par pilote par grand prix
+Affichage d’un graphique réalisé avec plotly et ggplot2 représentant le nombre de points gagnés de chaque pilote par grand prix sur une saison. Les données doivent être issues des data frames dataDriversParRaces et dataRaces.
 }

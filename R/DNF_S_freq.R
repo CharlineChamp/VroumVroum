@@ -1,5 +1,8 @@
 #' Fréquence de DNF/DNS de chaque pilote entre 2 années sélectionnées en amont
 #'
+#' Affichage d’un diagramme en barre, réalisé sous plotly et ggplot2, représentant la fréquence d'abandon de chaque pilotes entre deux années choisies. Les données doivent être issues de la data frame dataDriversParRaces.
+#'
+#'
 #' @param dataDrivers data frame
 #' @param annee_inf data frame
 #' @param annee_sup int

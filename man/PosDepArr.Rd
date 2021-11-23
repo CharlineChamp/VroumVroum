@@ -17,5 +17,5 @@ PosDepArr(data_sg, data_driver_race, grand_prix)
 graphique
 }
 \description{
-Comparaison des positions de depart et d'arrivee des pilotes
+Affichage d’un nuage de points, réalisé sous plotly et ggplot2, représentant la position d'arrivée d'un pilote en fonction de sa position de départ sur un grand prix. Les données doivent être issues des data frames dataStartingGrid et dataDriversParRaces.
 }

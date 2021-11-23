@@ -1,7 +1,6 @@
 #' Représentation de la somme des points gagnés par écurie par grand prix
 #'
-#' La data frame en paramètre doit faire parti des données représentées
-#'sur la page https://www.formula1.com/en/results.html/2021/races.html
+#'Affichage d’un graphique avec plotly et ggplot2 représentant les points gagnés de chaque écurie par grand prix sur une saison. Les données doivent être issues de la data frame dataDriversParRaces.
 #'
 #' @param data_race_driver data frame
 #'

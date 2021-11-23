@@ -1,5 +1,8 @@
 #' Nombre de points moyens de chaque pilote sur une saison
 #'
+#' Affichage d’un diagramme en barre, réalisé sous plotly et ggplot2, représentant le nombre de points moyens de chaque pilote sur une saison. Les données doivent être issues des data frames: dataRaces et dataDrivers.
+#'
+#'
 #' @param datadrivers data frame
 #' @param dataraces data frame
 #'

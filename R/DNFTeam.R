@@ -1,5 +1,7 @@
 #' Pourcentage de victoires par écurrie
 #'
+#' Affichage d’un diagramme circulaire, réalisé sous plotly, représentant le pourcentage d'abandon pour chaque écuries lors d'une saison. Les données doivent être issues de la data frame dataDriversParRaces.
+#'
 #' @param data data frame
 #'
 #' @return graphique

@@ -1,7 +1,6 @@
 #' Représentation des données pour les écuries
 #'
-#'#' La data frame en paramètre doit faire parti des données représentées
-#'sur la page https://www.formula1.com/en/results.html/2021/races.html
+#' Affichage d’un graphique sous plotly représentant le pourcentage de victoire des écuries sur une saison. Les données doivent être issues de la data frame dataTeams.
 #'
 #' @param data data frame
 #'
