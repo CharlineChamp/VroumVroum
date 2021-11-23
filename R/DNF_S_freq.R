@@ -49,7 +49,6 @@ DNF_S_freq <- function(dataDrivers,annee_inf,annee_sup){
   frequence <- total2$frequence
   DNF_S_pilote <- ggplot(data=total2,aes(x=modalite,y=frequence,fill=modalite))+
     geom_bar(stat="identity")+
-    ggtitle("Nombre de DNF et DNS de chaque pilote")+
     labs(fill="Pilotes")+
     xlab("Pilotes")+
     ylab("Nombre de DNF et DNS")+
