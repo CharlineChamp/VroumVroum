@@ -11,4 +11,4 @@ remotes::install_github('CharlineChamp/VroumVroum')
 
 ## Auteurs
 
-[Charline Champ](https://github.com/CharlineCha) & [Antoine Grancher](https://github.com/Antoine7526)
+[Charline Champ](https://github.com/CharlineChamp) & [Antoine Grancher](https://github.com/Antoine7526)
